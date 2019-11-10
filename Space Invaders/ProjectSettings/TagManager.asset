@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Muros
+  - balas
+  - enemigos
+  - enemigo_3
+  - enemigo_2
+  - enemigo_1
+  - BalasEnm
+  - puntaje
+  - vidas
+  - Balota
+  - boss
   layers:
   - Default
   - TransparentFX
@@ -13,13 +24,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Fondo
+  - Enemigos
+  - Jugador
+  - balas
+  - Muros
+  - BalasEnm
+  - Boss
   - 
   - 
   - 
@@ -40,4 +51,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1375847167
+    locked: 0
+  - name: enem
+    uniqueID: 602318343
     locked: 0
