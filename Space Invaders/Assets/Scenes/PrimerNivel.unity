@@ -765,6 +765,7 @@ GameObject:
   - component: {fileID: 200722356}
   - component: {fileID: 200722355}
   - component: {fileID: 200722359}
+  - component: {fileID: 200722360}
   m_Layer: 10
   m_Name: nave_1
   m_TagString: Player
@@ -895,14 +896,111 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d098662d5deb23a40b09fe6a46f4349a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangoDeDisp: 0.5
-  explosion: {fileID: 119475715}
-  disparo: {fileID: 2007862652}
+  Valor_actual: 0
+  rangoDeDisp: 1
+  MenuPausa: {fileID: 1530228402}
+  disparo: {fileID: 0}
   vidasNum: 3
   vidasTxt: {fileID: 1010601349}
   velocidad: 30
   Ballas_GTA: {fileID: 5152117428042617833, guid: 3f3b9260031a26c4ea89ffd8b88f8a2b,
     type: 3}
+--- !u!82 &200722360
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200722354}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ff3cf62f40a584e4cb592e2d8ba57e5e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.26
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &210797321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3593016573776210512, guid: cfc30359ec653a04ba61a1b80c7a4e45,
@@ -1277,6 +1375,11 @@ PrefabInstance:
       propertyPath: TiempoBaseDeDisparo
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6703075943808826518, guid: 1aa350831c52f614e9914fcd30333f1e,
+        type: 3}
+      propertyPath: rangoDeDisp
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa350831c52f614e9914fcd30333f1e, type: 3}
 --- !u!4 &291412354 stripped
@@ -1567,7 +1670,7 @@ GameObject:
   - component: {fileID: 352090605}
   - component: {fileID: 352090604}
   m_Layer: 5
-  m_Name: boton restart
+  m_Name: Reiniciar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1637,7 +1740,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1530228404}
-        m_MethodName: Iniciar
+        m_MethodName: reiniciar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2242,6 +2345,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 902735612276305640, guid: fdea909e8a7a6514ba1053211c576782,
+        type: 3}
+      propertyPath: velocidad
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdea909e8a7a6514ba1053211c576782, type: 3}
 --- !u!4 &662917006 stripped
@@ -2476,6 +2584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: TiempoBaseDeDisparo
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703075943808826518, guid: 1aa350831c52f614e9914fcd30333f1e,
+        type: 3}
+      propertyPath: rangoDeDisp
+      value: 1.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa350831c52f614e9914fcd30333f1e, type: 3}
@@ -3250,6 +3363,11 @@ PrefabInstance:
       propertyPath: TiempoBaseDeDisparo
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6703075943808826518, guid: 1aa350831c52f614e9914fcd30333f1e,
+        type: 3}
+      propertyPath: rangoDeDisp
+      value: 1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa350831c52f614e9914fcd30333f1e, type: 3}
 --- !u!4 &1077935596 stripped
@@ -3655,6 +3773,11 @@ PrefabInstance:
       propertyPath: TiempoBaseDeDisparo
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6703075943808826518, guid: 1aa350831c52f614e9914fcd30333f1e,
+        type: 3}
+      propertyPath: rangoDeDisp
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa350831c52f614e9914fcd30333f1e, type: 3}
 --- !u!1001 &1360215271
@@ -3734,6 +3857,11 @@ PrefabInstance:
       propertyPath: TiempoBaseDeDisparo
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6703075943808826518, guid: 1aa350831c52f614e9914fcd30333f1e,
+        type: 3}
+      propertyPath: rangoDeDisp
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa350831c52f614e9914fcd30333f1e, type: 3}
 --- !u!4 &1393400812 stripped
@@ -3755,7 +3883,7 @@ GameObject:
   - component: {fileID: 1423465517}
   - component: {fileID: 1423465516}
   m_Layer: 5
-  m_Name: boton seguir
+  m_Name: Continuar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3824,8 +3952,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530228404}
-        m_MethodName: Iniciar
+      - m_Target: {fileID: 200722359}
+        m_MethodName: Pausa
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3888,7 +4016,7 @@ GameObject:
   - component: {fileID: 1459374998}
   - component: {fileID: 1459374997}
   m_Layer: 5
-  m_Name: boton salir
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4563,6 +4691,11 @@ PrefabInstance:
       propertyPath: TiempoBaseDeDisparo
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6703075943808826518, guid: 1aa350831c52f614e9914fcd30333f1e,
+        type: 3}
+      propertyPath: rangoDeDisp
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa350831c52f614e9914fcd30333f1e, type: 3}
 --- !u!4 &1816600362 stripped
@@ -4653,6 +4786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: TiempoBaseDeDisparo
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703075943808826518, guid: 1aa350831c52f614e9914fcd30333f1e,
+        type: 3}
+      propertyPath: rangoDeDisp
+      value: 1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa350831c52f614e9914fcd30333f1e, type: 3}
@@ -5034,6 +5172,11 @@ PrefabInstance:
         type: 3}
       propertyPath: TiempoBaseDeDisparo
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703075943808826518, guid: 1aa350831c52f614e9914fcd30333f1e,
+        type: 3}
+      propertyPath: rangoDeDisp
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa350831c52f614e9914fcd30333f1e, type: 3}

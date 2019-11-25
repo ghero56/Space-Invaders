@@ -6,7 +6,7 @@ public class Enem : MonoBehaviour {
 
     public float velocidad = 2;
 
-    public float rangoDeDisp = 0.5F;
+    public float rangoDeDisp = 1F;
 
     private float siguienteDis;
 
@@ -22,11 +22,11 @@ public class Enem : MonoBehaviour {
 
     public GameObject Disparo_ene;
 
-    public float TiempoMinimoDeDisparo = 0.5F;
+    public float TiempoMinimoDeDisparo = 1F;
 
-    public float TiempoMaximoDeDisparo = 10.0F;
+    public float TiempoMaximoDeDisparo = 5.0F;
 
-    public float TiempoBaseDeDisparo = 0.9F;
+    public float TiempoBaseDeDisparo = 3F;
 
     public Sprite ExplosionNave1;
 
@@ -35,6 +35,25 @@ public class Enem : MonoBehaviour {
     void Start(){
 
         rigidBody = GetComponent<Rigidbody2D>();
+        if(Disparo.cambio_de_nivel < 32 && Disparo.cambio_de_nivel > 24)
+        {
+            velocidad *= 2;
+        }
+
+        if (Disparo.cambio_de_nivel == 24 && Disparo.cambio_de_nivel > 16)
+        {
+            velocidad *= 2;
+        }
+
+        if (Disparo.cambio_de_nivel == 16 || Disparo.cambio_de_nivel > 8)
+        {
+            velocidad *= 2;
+        }
+
+        if (Disparo.cambio_de_nivel < 8 && Disparo.cambio_de_nivel > 1)
+        {
+            velocidad *= 2;
+        }
 
         rigidBody.velocity = new Vector2(1, 0) * velocidad;
 

@@ -10,12 +10,12 @@ public class Disparo : MonoBehaviour{
 
     public float velocidad = 20; //flotante para la velocidad de la bala
 
-    static int puntajeNum = 0;
+    public static int puntajeNum = 0;
 
-    static int cambio_de_nivel = 32;
+    public static int cambio_de_nivel = 32;
     public Text puntajeTxt;
 
-    public AudioSource explosion;
+    public AudioSource explosion_enm;
 
     private Rigidbody2D CuerpoCalloso; //se le otorga el atributo de cuerpo rigido
 
@@ -49,7 +49,7 @@ public class Disparo : MonoBehaviour{
         if (col.gameObject.tag == "enemigos")//si le pega a un enemigo morado
         {
             
-            if (cambio_de_nivel == 0)
+            if (cambio_de_nivel <= 0)
             {
                 SceneManager.LoadScene("Boss");
             }
@@ -74,7 +74,7 @@ public class Disparo : MonoBehaviour{
         {
             //explosion.Play();
             
-            if (cambio_de_nivel == 0)
+            if (cambio_de_nivel <= 0)
             {
                 SceneManager.LoadScene("Boss");
             }
@@ -96,7 +96,7 @@ public class Disparo : MonoBehaviour{
         {
             //explosion.Play();
             
-            if (cambio_de_nivel == 0)
+            if (cambio_de_nivel <= 0)
             {
                 SceneManager.LoadScene("Boss");
             }
@@ -136,7 +136,7 @@ public class Disparo : MonoBehaviour{
         {
             //explosion.Play();
             
-            if (cambio_de_nivel == 0)
+            if (cambio_de_nivel <= 0)
             {
                 SceneManager.LoadScene("Boss");
             }

@@ -23,7 +23,13 @@ public class MenuPrincipal : MonoBehaviour
 
     public void menu()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);//llama al escenario 0
+    }
+
+    public void reiniciar()
+    {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);//llama al escenario 0
     }
 }

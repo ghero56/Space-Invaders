@@ -37,6 +37,7 @@ public class Boss : MonoBehaviour
 
     void Start()
     {
+        
 
         rigidBody = GetComponent<Rigidbody2D>();
 
@@ -50,10 +51,10 @@ public class Boss : MonoBehaviour
 
     }
 
-    void Cambiar(int direccion) //funcion para voltear la direccion
-    {//recibe el entero llamado direccion
+    void Cambiar(int direccion)
+    {
         Vector2 nuevaVelocidad = rigidBody.velocity;
-        nuevaVelocidad.x = velocidad * direccion;//enrique segoviano
+        nuevaVelocidad.x = velocidad * direccion;
         rigidBody.velocity = nuevaVelocidad;
     }
 
@@ -82,10 +83,8 @@ public class Boss : MonoBehaviour
         if (col.gameObject.tag == "balas")
         {
             vidas--;
-            
-            
         }
-        if (vidas == 0)
+        if (vidas <= 0)
         {
             //explosion.Play();
             Destroy(gameObject);
